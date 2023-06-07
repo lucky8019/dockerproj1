@@ -1,0 +1,29 @@
+version: '3'
+services:
+  devops:
+    image: luckydevops/devopsrepo:latest
+    ports:
+      - "90:80"
+    deploy:
+      replicas: 3
+
+  aws:
+    image: luckydevops/awsrepo:latest
+    ports:
+      - "91:80"
+    deploy:
+      replicas: 3
+
+  datascience:
+    image: luckydevops/datasciencerepo:latest
+    ports:
+      - "92:80"
+    deploy:
+      replicas: 3
+
+  azure:
+    image: luckydevops/azurerepo:latest
+    ports:
+      - "93:80"
+    deploy:
+      replicas: 3
